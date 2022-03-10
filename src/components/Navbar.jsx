@@ -2,14 +2,13 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  height: 100px;
+  height: 50px;
 `;
-
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
 `;
 
 const Left = styled.div`
@@ -28,20 +27,21 @@ const Menu = styled.ul`
   display: flex;
   list-style: none;
 `;
+
 const MenuItem = styled.li`
-  margin-left: 2rem;
-  font-size: 2rem;
+  margin-right: 30px;
+  font-size: 20px;
   font-weight: bold;
   color: gray;
 `;
 
 const Button = styled.button`
   border: 2px solid white;
-  padding: 1rem 1.5rem;
+  padding: 10px 15px;
   background-color: blue;
   color: white;
   font-weight: bold;
-  border-radius: 1rem;
+  border-radius: 10px;
   cursor: pointer;
 `;
 
