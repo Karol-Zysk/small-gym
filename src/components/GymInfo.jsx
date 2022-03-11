@@ -1,94 +1,91 @@
 import React from "react";
 import styled from "styled-components";
-import Gym from "./img/gym1.png";
+import { BsCheckCircle } from "react-icons/bs";
 
 const Container = styled.div`
-  height: calc(100vh - 50px);
   display: flex;
-  padding: 20px;
 `;
 
 const Left = styled.div`
-  width: 60%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-`;
-
-const Title = styled.h1`
+  align-content: center;
   width: 60%;
-  font-size: 60px;
+  height: 100%;
 `;
 
-const Desc = styled.p`
-  width: 60%;
-  font-size: 20px;
-  margin-top: 20px;
-`;
-
-const Info = styled.div`
+const Iframe = styled.iframe`
+  padding-top: 10rem;
   display: flex;
-  width: 60%;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 50px;
-`;
-
-const Button = styled.button`
-  padding: 15px;
-  background-color: blue;
-  color: white;
-  font-weight: bold;
-  border-radius: 10px;
-  border: 2px solid white;
-  letter-spacing: 2px;
-  cursor: pointer;
-`;
-
-const Contact = styled.div`
-  display: flex;
-  flex-direction: column;
-`;
-
-const Phone = styled.span`
-  color: white;
-  font-weight: bold;
-`;
-
-const ContactText = styled.span`
-  color: darkgray;
-  margin-top: 5px;
-  font-weight: bold;
+  width: 90%;
+  height: 30rem;
+  align-self: center;
 `;
 
 const Right = styled.div`
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 4rem;
 `;
 
-const Image = styled.img`
-  width: 100%;
+const Title = styled.span`
+  margin-top: 5rem;
+  font-size: 60px;
+  font-weight: bold;
+`;
+
+const SubTitle = styled.span`
+  width: 60%;
+  font-size: 35px;
+  margin-top: 15px;
+  font-weight: bold;
+`;
+const Description = styled.p`
+  font-size: 20px;
+  margin-top: 8px;
+`;
+const Button = styled.button`
+  width: 150px;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 20px;
+  background-color: red;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin-top: 20px;
 `;
 
 const GymInfo = () => {
   return (
     <Container>
       <Left>
-        <Title>Small Gym is Yours Place.</Title>
-        <Desc>
-          Feel good train well. Make yourself at home in the small gym. For us
-          you are not only a customer. You are our brother, my friend.
-        </Desc>
-        <Info>
-          <Button>3D Visit</Button>
-          <Contact>
-            <Phone>Call Us: (22) 314-159-265</Phone>
-            <ContactText>For any questions</ContactText>
-          </Contact>
-        </Info>
+        <Iframe
+          frameBorder="0"
+          src="https://momento360.com/e/u/f4ca0d7e91f646f08b7d1c27ace31c26?utm_campaign=embed&utm_source=other&heading=27.6&pitch=37.2&field-of-view=75&size=medium"
+          title="gymFrame"
+        ></Iframe>
       </Left>
       <Right>
-        <Image src={Gym} />
+        <Title>SmallGym Info</Title>
+        <SubTitle>Training Area:</SubTitle>
+        <Description>100square meters</Description>
+        <Description>high-class equipment</Description>
+        <SubTitle>Furthermore:</SubTitle>
+        <Description>
+          Experienced Trainers <BsCheckCircle style={{ color: "green" }} />
+        </Description>
+
+        <Description>
+          Low Price <BsCheckCircle style={{ color: "green" }} />
+        </Description>
+        <Description>
+          Comfort <BsCheckCircle style={{ color: "green" }} />
+        </Description>
+        <Button>Trial Training</Button>
       </Right>
     </Container>
   );

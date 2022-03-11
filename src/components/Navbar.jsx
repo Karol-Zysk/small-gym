@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   height: 50px;
+  padding: 1vh 1vw 0vh 1vw ;
 `;
 const Wrapper = styled.div`
   padding: 10px 20px;
@@ -12,7 +13,7 @@ const Wrapper = styled.div`
 `;
 
 const Left = styled.div`
-  width: 60%;
+  width: 70%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -20,7 +21,8 @@ const Left = styled.div`
 
 const Logo = styled.h1`
   font-weight: bold;
-  text-decoration: underline blue;
+  font-size: 2.5rem;
+  color: white;
 `;
 
 const Menu = styled.ul`
@@ -30,7 +32,7 @@ const Menu = styled.ul`
 
 const MenuItem = styled.li`
   margin-right: 30px;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
   color: gray;
 `;
