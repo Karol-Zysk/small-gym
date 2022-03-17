@@ -48,9 +48,9 @@ const Description = styled.p`
 `;
 const Button = styled.button`
   width: 150px;
-  border: none;
+  border: 3px solid white;
   padding: 15px 20px;
-  border-radius: 20px;
+  border-radius: 15px;
   background-color: red;
   font-size: 15px;
   font-weight: bold;

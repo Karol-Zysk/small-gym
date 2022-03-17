@@ -2,6 +2,7 @@ import Navbar from "./components/Navbar";
 import styled from "styled-components";
 import Home from "./components/Home";
 import GymInfo from "./components/GymInfo";
+import StartToday from "./components/StartToday";
 
 const Container = styled.div`
   height: 100vh;
@@ -26,8 +27,21 @@ const Shape3 = styled.div`
   position: absolute;
   top: 0;
   left: 0;
-  clip-path: polygon(0% 0%, 35% 0%, 68% 100%, 0% 100%);
+
+  clip-path: polygon(68% 0, 100% 0, 100% 100%, 0% 100%);
   background-color: red;
+  z-index: -1;
+`;
+
+const StartTodayShape = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  clip-path: polygon(0 0, 100% 0, 28% 100%, 0% 100%);
+  background-color: orange;
   z-index: -1;
 `;
 
@@ -52,9 +66,12 @@ function App() {
         <Home />
       </Container>
       <Container>
-        <GymInfo>
-          <Shape3 />
-        </GymInfo>
+        <Shape3 />
+        <GymInfo></GymInfo>
+      </Container>
+      <Container>
+        <StartTodayShape />
+        <StartToday />
       </Container>
     </>
   );
