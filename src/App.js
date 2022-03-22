@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Home from "./components/Home";
 import GymInfo from "./components/GymInfo";
 import StartToday from "./components/StartToday";
+import Prices from "./components/Prices";
 
 const Container = styled.div`
   height: 100vh;
@@ -29,7 +30,7 @@ const Shape3 = styled.div`
   left: 0;
 
   clip-path: polygon(68% 0, 100% 0, 100% 100%, 0% 100%);
-  background-color: red;
+  background-color: lightcoral;
   z-index: -1;
 `;
 
@@ -72,6 +73,9 @@ function App() {
       <Container>
         <StartTodayShape />
         <StartToday />
+      </Container>
+      <Container>
+        <Prices/>
       </Container>
     </>
   );

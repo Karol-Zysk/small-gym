@@ -5,7 +5,7 @@ import MiniCard from "./MiniCard";
 
 const Container = styled.div`
   display: flex;
-  height: 100% ;
+  height: 100%;
 `;
 
 const Left = styled.div`
@@ -31,27 +31,45 @@ const Title = styled.h1`
   font-size: 60px;
 `;
 const Desc = styled.p`
-font-size: 20px ;
+  font-size: 20px;
   margin-top: 20px;
-  color: rgb(31, 31, 31)
+  color: rgb(31, 31, 31);
 `;
 
 const CardContainer = styled.div`
-display: flex;
-justify-content: space-between ;
-margin-top: 40px;`
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+`;
 
 const Button = styled.button`
   width: 180px;
   border: 4px solid white;
   border-radius: 10px;
   background-color: orange;
+  font-weight: bold;
   font-size: 20px;
   padding: 15px;
   margin-top: 50px;
-  cursor: pointer;`
+  cursor: pointer;
+`;
 
 const StartToday = () => {
+  const data = [
+    {
+      number: 1,
+      text: "Call and arrange a free Personal Training.",
+    },
+    {
+      number: 2,
+      text: "Train and decide if you like our place.",
+    },
+    {
+      number: 3,
+      text: "DON'T WAIT !!!",
+    },
+  ];
+
   return (
     <Container>
       <Left>
@@ -64,13 +82,14 @@ const StartToday = () => {
             Don’t let the fear of the time it will take to accomplish something
             stand in the way of your doing it. The time will pass anyway; we
             might just as well put that passing time to the best possible use.
+            Start Today. Just follow those three steps
           </Desc>
           <CardContainer>
-              <MiniCard/>
-              <MiniCard/>
-              <MiniCard/>
+            {data.map((card) => {
+              return <MiniCard number={card.number} text={card.text} />;
+            })}
           </CardContainer>
-          <Button> Chose an offer</Button>
+          <Button> Free Training</Button>
         </Wrapper>
       </Right>
     </Container>

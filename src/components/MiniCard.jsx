@@ -1,29 +1,32 @@
 import React from 'react';
 import styled from 'styled-components';
-import search from './img/search.png'
 
 const Container = styled.div`
-width: 100px;
-padding: 20px;
+width: 150px;
+height: 120px ;
+background-color: rgba(0,0,0,0.05);
+padding: 25px;
 display: flex;
 flex-direction: column;
 align-items: center ;
-box-shadow: 0px 0px 17px -11px rgba(0,0,0,0.59);`
+border-radius: 15px;
+box-shadow: 0px 0px 17px -11px rgba(0,0,0,0.9);`
 
-const Image = styled.img`
-width: 30px`
+const Number = styled.h1`
+font-size: 50px`
 
 const Text = styled.span`
   margin-top: 10px;
+  font-size: 20px ;
   text-align: center  `
 
   
 
-const MiniCard = () => {
+const MiniCard = ({number, text}) => {
     return <Container>
-        <Image src={search} alt="search"/>
+        <Number>{number}</Number>
         <Text>
-            First month for 5$
+            {text}
         </Text>
     </Container>;
 }

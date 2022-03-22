@@ -1,6 +1,7 @@
-import React from "react";
+import { useState } from "react";
 import styled from "styled-components";
 import { BsCheckCircle } from "react-icons/bs";
+import gymBtn from "./img/gym_button.png";
 
 const Container = styled.div`
   display: flex;
@@ -9,17 +10,33 @@ const Container = styled.div`
 const Left = styled.div`
   display: flex;
   justify-content: center;
-  align-content: center;
   width: 60%;
   height: 100%;
 `;
 
 const Iframe = styled.iframe`
-  padding-top: 10rem;
+  margin-top: 8vh;
+  border: solid white 4px;
+  border-radius: 25px;
   display: flex;
-  width: 90%;
-  height: 30rem;
+  box-shadow: 0px 0px 17px -11px rgba(0, 0, 0, 0.9);
+  display: ${(props) => !props.isOpen && "none"};
+  width: 80%;
+  height: 84vh;
   align-self: center;
+`;
+
+const Image = styled.img`
+  display: ${(props) => props.isOpen && "none"};
+  height: 84vh;
+  margin-top: 8vh;
+  border: solid none 4px;
+  filter: brightness(0.75);
+  transition: 350ms ease-in-out;
+  align-self: center;
+  &:hover {
+    filter: brightness(1);
+  }
 `;
 
 const Right = styled.div`
@@ -48,10 +65,10 @@ const Description = styled.p`
 `;
 const Button = styled.button`
   width: 150px;
-  border: 3px solid white;
+  border: 3.5px solid white;
   padding: 15px 20px;
   border-radius: 15px;
-  background-color: red;
+  background-color: lightcoral;
   font-size: 15px;
   font-weight: bold;
   letter-spacing: 1px;
@@ -59,11 +76,20 @@ const Button = styled.button`
   margin-top: 20px;
 `;
 
-const GymInfo = () => {
+const GymInfo = (props) => {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <Container>
       <Left>
+        <Image
+          onClick={() => setIsOpen(true)}
+          src={gymBtn}
+          alt="gymBTN"
+          isOpen={isOpen}
+        />
         <Iframe
+          isOpen={isOpen}
           frameBorder="0"
           src="https://momento360.com/e/u/f4ca0d7e91f646f08b7d1c27ace31c26?utm_campaign=embed&utm_source=other&heading=27.6&pitch=37.2&field-of-view=75&size=medium"
           title="gymFrame"
@@ -85,7 +111,7 @@ const GymInfo = () => {
         <Description>
           Comfort <BsCheckCircle style={{ color: "green" }} />
         </Description>
-        <Button>Trial Training</Button>
+        <Button onClick={() => setIsOpen(true)}>3D VISIT</Button>
       </Right>
     </Container>
   );
