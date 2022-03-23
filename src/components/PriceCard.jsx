@@ -2,7 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding: 20px;
+  margin-right: 50px;
+  padding: 25px;
   box-shadow: 0px 0px 17px -11px rgba(0, 0, 0, 0.9);
   background-color: #fff;
   border-radius: 10px;
@@ -11,36 +12,59 @@ const Container = styled.div`
   align-items: center;
 `;
 
-const PriceContainer = styled.div``;
+const PriceContainer = styled.div`
+  display: flex;
+  align-items: center;
+`;
 
 const Price = styled.span`
-font-weight: bold;
-font-size: 50px;
-`
-const Type = styled.button``;
+  font-weight: bold;
+  font-size: 50px;
+`;
+const Type = styled.button`
+  padding: 10px;
+  margin: 10px;
+  border: 2px solid ${(props) => (props.plan === "VIP" ? "gold" : "darkblue")};
+  background-color: white;
+  color: ${(props) => (props.plan === "VIP" ? "gold" : "darkblue")};
+  border-radius: 20px;
+  letter-spacing: ${(props) => (props.plan === "VIP" ? "2px" : "1px")};
+  font-weight: ${(props) => (props.plan === "VIP" ? "bold" : "medium")};
+`;
 
-const List = styled.ul``;
+const List = styled.ul`
+  list-style: none;
+`;
 
-const ListItem = styled.li``
+const ListItem = styled.li`
+  margin: 30px 0;
+`;
 
 const Button = styled.button`
-`
+  border: none;
+  background-color: ${(props) => (props.plan === "VIP" ? "gold" : "darkblue")};
+  color: white;
+  font-size: 16px;
+  padding: 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-weight: bold;
+`;
 
-
-const PriceCard = () => {
+const PriceCard = (props) => {
   return (
     <Container>
       <PriceContainer>
-        $<Price>20</Price>/Per Month
+        $<Price>{props.price}</Price>/{props.period}
       </PriceContainer>
 
-      <Type>Basic Plan</Type>
+      <Type plan={props.plan}>{props.plan}</Type>
       <List>
-        <ListItem>300 Items</ListItem>
-        <ListItem>Train Like Pro</ListItem>
-        <ListItem>Free Personal Training</ListItem>
+        {props.pack.map((packLi) => {
+          return <ListItem>{packLi}</ListItem>;
+        })}
       </List>
-      <Button>Join Now</Button>
+      <Button plan={props.plan}>Join Now</Button>
     </Container>
   );
 };
