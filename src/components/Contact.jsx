@@ -8,6 +8,9 @@ import Button from "./Button";
 const Container = styled.div`
   height: 80%;
   background: white;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 const Wrapper = styled.div`
   height: 100%;
@@ -15,10 +18,17 @@ const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+    padding: 0;
+  }
 `;
 
 const FormContainer = styled.div`
   width: 50%;
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 const Form = styled.form`
@@ -26,10 +36,20 @@ const Form = styled.form`
   align-items: center;
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 const Title = styled.h1`
   margin: 0 0 20px 140px;
+  @media only screen and (max-width: 500px) {
+    text-align: center;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    padding: 0;
+  }
 `;
 
 const LeftForm = styled.div`
@@ -38,6 +58,10 @@ const LeftForm = styled.div`
   flex-direction: column;
   justify-content: space-between;
   margin-right: 20px;
+  @media only screen and (max-width: 500px) {
+    height: 50%;
+    margin-right: 0;
+  }
 `;
 
 const RightForm = styled.div`
@@ -45,17 +69,30 @@ const RightForm = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  @media only screen and (max-width: 500px) {
+    height: 50%;
+    margin-right: 0;
+  }
 `;
 
 const Input = styled.input`
   width: 200px;
   padding: 20px;
+  @media only screen and (max-width: 500px) {
+    padding: 5px;
+  }
 `;
 const TextArea = styled.textarea`
   width: 200px;
   height: 60%;
   padding: 20px;
+  @media only screen and (max-width: 500px) {
+    padding: 5px;
+    margin-top: 20px;
+  }
 `;
+
+
 
 const AdressContainer = styled.div`
   width: 50%;
@@ -72,11 +109,16 @@ const AdressItem = styled.div`
 const Icon = styled.img`
   width: 20px;
   margin-right: 20px;
+  
 `;
 
 const Text = styled.span`
   font-size: 20px;
   margin-bottom: 15px;
+  @media only screen and (max-width: 500px) {
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
 `;
 
 const Contact = () => {
@@ -96,7 +138,7 @@ const Contact = () => {
 
             <RightForm>
               <TextArea placeholder="Your Message" />
-              <Button color="blue">Send</Button>
+              <Button style={{marginBottom: "10px"}} color="blue">Send</Button>
             </RightForm>
           </Form>
         </FormContainer>

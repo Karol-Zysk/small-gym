@@ -55,7 +55,7 @@ const Right = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 4rem;
+  padding: 20px;
   @media only screen and (max-width: 500px) {
     width: 100%;
   }
@@ -65,6 +65,9 @@ const Title = styled.span`
   margin-top: 5rem;
   font-size: 60px;
   font-weight: bold;
+  @media only screen and (max-width: 500px) {
+    font-size: 45px;;
+  }
 `;
 
 const SubTitle = styled.span`
@@ -72,10 +75,18 @@ const SubTitle = styled.span`
   font-size: 35px;
   margin-top: 15px;
   font-weight: bold;
+  @media only screen and (max-width: 500px) {
+    font-size: 25px;
+    margin-top: 20px;
+  }
 `;
 const Description = styled.p`
   font-size: 20px;
   margin-top: 8px;
+  @media only screen and (max-width: 500px) {
+    margin-top: 12px;
+    margin-left: 5px;
+  }
 `;
 
 const Modal = styled.div`

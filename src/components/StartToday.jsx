@@ -7,10 +7,16 @@ import MiniCard from "./MiniCard";
 const Container = styled.div`
   display: flex;
   height: 100%;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 const Left = styled.div`
   width: 50%;
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 const Image = styled.img`
@@ -20,21 +26,31 @@ const Image = styled.img`
 
 const Right = styled.div`
   width: 50%;
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 const Wrapper = styled.div`
-  padding: 60px;
+  padding: 40px 15px 0px 15px;
   display: flex;
   flex-direction: column;
 `;
 
 const Title = styled.h1`
   font-size: 60px;
+  @media only screen and (max-width: 500px) {
+    margin-bottom: 30px;
+  }
 `;
 const Desc = styled.p`
   font-size: 20px;
   margin-top: 20px;
   color: rgb(31, 31, 31);
+  @media only screen and (max-width: 500px) {
+    margin-top: 12px;
+    line-height: 25px;
+  }
 `;
 
 const CardContainer = styled.div`
@@ -68,10 +84,13 @@ const StartToday = () => {
         <Wrapper>
           <Title>Start Today</Title>
           <Desc>
-            Don’t let the fear of the time it will take to accomplish something
-            stand in the way of your doing it. The time will pass anyway; we
-            might just as well put that passing time to the best possible use.
-            Start Today. Just follow those three steps
+            Don’t let the <b>fear</b> of the time it will take to accomplish
+            something stand in the way of your doing it.{" "}
+          </Desc>
+          <Desc>
+            The <u>time will pass anyway</u> we might just as well put that
+            passing time to the best possible use. Start Today. Just follow
+            those three steps
           </Desc>
           <CardContainer>
             {data.map((card) => {

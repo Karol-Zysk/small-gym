@@ -13,6 +13,15 @@ const Container = styled.div`
   flex: 1 1 0;
   min-width: 0;
   max-width: 18vw ;
+  @media only screen and (max-width: 500px) {
+    margin-right: 0;
+    max-width: 75%;
+    min-width: 75%;
+    margin-bottom: 10px;
+    padding: 10px 10px 0px 10px;
+    height: auto;
+    flex: 0 0 0;
+  }
 `;
 
 const PriceContainer = styled.div`
@@ -23,6 +32,10 @@ const PriceContainer = styled.div`
 const Price = styled.span`
   font-weight: bold;
   font-size: 50px;
+  @media only screen and (max-width: 500px) {
+    font-size: 30px;
+    margin-bottom: 0;
+  }
 `;
 const Type = styled.button`
   padding: 10px;
@@ -33,14 +46,26 @@ const Type = styled.button`
   border-radius: 20px;
   letter-spacing: ${(props) => (props.plan === "VIP" ? "2px" : "1px")};
   font-weight: ${(props) => (props.plan === "VIP" ? "bold" : "medium")};
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 const List = styled.ul`
   list-style: none;
+  @media only screen and (max-width: 500px) {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    
+  }
+
 `;
 
 const ListItem = styled.li`
   margin: 30px 0;
+  @media only screen and (max-width: 500px) {
+    margin: 7px 0
+  }
 `;
 
 const Button = styled.button`
@@ -57,6 +82,12 @@ const Button = styled.button`
   transition: 100ms ease-in-out;
   width: max-content;
   filter: brightness(1);
+  @media only screen and (max-width: 500px) {
+    margin-top: 8px;
+    padding: 8px;
+    font-size: 12px;
+    margin-bottom: 12px;
+  }
   &&:hover {
     filter: brightness(1.05) ;
     border: 1px solid white;

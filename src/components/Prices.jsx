@@ -5,9 +5,12 @@ import PriceCard from "./PriceCard";
 const Container = styled.div`
   height: 100%;
   display: flex;
-  
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 const Prices = () => {

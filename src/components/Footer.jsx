@@ -12,6 +12,9 @@ const Wrapper = styled.div`
   padding-top: 55px;
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 500px) {}
+  padding: 15px;
+
 `;
 
 const List = styled.ul`
@@ -23,11 +26,19 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   margin-right: 20px;
+  @media only screen and (max-width: 500px) {
+    margin-right: 15px;
+    font-size: 15lpx
+  }
 `;
 
 const Copyright = styled.span`
   margin-right: 20px;
   font-size: 20px;
+  @media only screen and (max-width: 500px) {
+    font-size: 16px;
+    margin-bottom: 2opx;
+  }
 `;
 
 const Footer = () => {

@@ -15,6 +15,8 @@ const Button = styled.button`
   @media only screen and (max-width: 500px) {
     border: 2px solid white;
     filter: brightness(1);
+    font-size: 14px;
+    padding: 10px;
 
     &&:hover {
       filter: brightness(1.05);
