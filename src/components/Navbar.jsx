@@ -5,15 +5,16 @@ import Button from "./Button";
 const Container = styled.div`
   height: 50px;
   padding: 1vh 1vw 0vh 1vw;
-
-  
 `;
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  
+  @media only screen and (max-width: 500px) {
+    align-items: flex-end;
+    padding: 0px 5px;
+  }
 `;
 
 const Left = styled.div`
@@ -27,6 +28,10 @@ const Logo = styled.h1`
   font-weight: bold;
   font-size: 2.5rem;
   color: white;
+  @media only screen and (max-width: 500px) {
+    color: black;
+    text-decoration: underline ;
+  }
 `;
 
 const Menu = styled.ul`

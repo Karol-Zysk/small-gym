@@ -6,6 +6,9 @@ import Button from "./Button";
 
 const Container = styled.div`
   display: flex;
+  @media only screen and (max-width: 500px) {
+    flex-direction: column;
+  }
 `;
 
 const Left = styled.div`
@@ -13,6 +16,9 @@ const Left = styled.div`
   justify-content: center;
   width: 60%;
   height: 100%;
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 const Iframe = styled.iframe`
@@ -24,7 +30,11 @@ const Iframe = styled.iframe`
   display: ${(props) => !props.isOpen && "none"};
   width: 80%;
   height: 84vh;
-  align-self: center;
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+    height: 55%;
+    margin-top: 40%;
+  }
 `;
 
 const Image = styled.img`
@@ -46,6 +56,9 @@ const Right = styled.div`
   flex-direction: column;
   justify-content: center;
   padding: 4rem;
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
 const Title = styled.span`
@@ -65,10 +78,18 @@ const Description = styled.p`
   margin-top: 8px;
 `;
 
+const Modal = styled.div`
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+`;
 
 const GymInfo = (props) => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const smallScreen = window.screen.width <= 500 ? true : false;
   return (
     <Container>
       <Left>
@@ -101,8 +122,27 @@ const GymInfo = (props) => {
         <Description>
           Comfort <BsCheckCircle style={{ color: "green" }} />
         </Description>
-        <Button color="lightcoral" onClick={() => setIsOpen(true)}>3D VISIT</Button>
+        <Button color="lightcoral" onClick={() => setIsOpen(true)}>
+          3D VISIT
+        </Button>
       </Right>
+      {smallScreen && isOpen && (
+        <Modal>
+          <Iframe
+            isOpen={isOpen}
+            frameBorder="0"
+            src="https://momento360.com/e/u/f4ca0d7e91f646f08b7d1c27ace31c26?utm_campaign=embed&utm_source=other&heading=27.6&pitch=37.2&field-of-view=75&size=medium"
+            title="gymFrame"
+          ></Iframe>
+          <Button
+            color="lightcoral"
+            style={{ marginLeft: "10px", marginTop: "15px" }}
+            onClick={() => setIsOpen(false)}
+          >
+            Close
+          </Button>
+        </Modal>
+      )}
     </Container>
   );
 };

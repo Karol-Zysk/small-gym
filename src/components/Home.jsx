@@ -65,6 +65,7 @@ const Phone = styled.span`
   font-weight: bold;
   @media only screen and (max-width: 500px) {
     margin-top: 20px;
+    color: black;
   }
 `;
 
@@ -72,7 +73,7 @@ const ContactText = styled.span`
   color: white;
   margin-top: 5px;
   @media only screen and (max-width: 500px) {
-    margin-top: 20px;
+    display: none;
   }
 `;
 
@@ -97,8 +98,10 @@ const Home = () => {
       <Left>
         <Title>Small Gym is Yours Place.</Title>
         <Desc>
-          Feel good train well. Make yourself at home in the small gym. For us
-          you are not only a customer. You are our brother, my friend.
+          <br></br>
+          <b>Feel good train well.</b> Make yourself at home in the small gym.
+          For us you are not only a customer. You are <b>Our brother</b>, my
+          friend.
         </Desc>
         <Info>
           <Button color="blue">Contact</Button>
