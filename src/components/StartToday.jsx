@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "./Button";
 import image from "./img/gym3.png";
 import MiniCard from "./MiniCard";
 
@@ -42,18 +43,6 @@ const CardContainer = styled.div`
   margin-top: 40px;
 `;
 
-const Button = styled.button`
-  width: 180px;
-  border: 4px solid white;
-  border-radius: 10px;
-  background-color: orange;
-  font-weight: bold;
-  font-size: 20px;
-  padding: 15px;
-  margin-top: 50px;
-  cursor: pointer;
-`;
-
 const StartToday = () => {
   const data = [
     {
@@ -89,7 +78,7 @@ const StartToday = () => {
               return <MiniCard number={card.number} text={card.text} />;
             })}
           </CardContainer>
-          <Button> Free Training</Button>
+          <Button color="orange"> Free Training</Button>
         </Wrapper>
       </Right>
     </Container>

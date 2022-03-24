@@ -10,6 +10,9 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 18vw ;
 `;
 
 const PriceContainer = styled.div`
@@ -41,15 +44,27 @@ const ListItem = styled.li`
 `;
 
 const Button = styled.button`
-  border: none;
   background-color: ${(props) => (props.plan === "VIP" ? "gold" : "darkblue")};
+  border: 1px solid transparent;
+  
   color: white;
   font-size: 16px;
   padding: 15px;
   border-radius: 15px;
   cursor: pointer;
   font-weight: bold;
+  margin-top: 5vh;
+  transition: 100ms ease-in-out;
+  width: max-content;
+  filter: brightness(1);
+  &&:hover {
+    filter: brightness(1.05) ;
+    border: 1px solid white;
+    transform: scale(0.99);
+    transition: 100ms ease-in-out;
+  }
 `;
+
 
 const PriceCard = (props) => {
   return (

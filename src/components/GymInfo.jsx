@@ -2,6 +2,7 @@ import { useState } from "react";
 import styled from "styled-components";
 import { BsCheckCircle } from "react-icons/bs";
 import gymBtn from "./img/gym_button.png";
+import Button from "./Button";
 
 const Container = styled.div`
   display: flex;
@@ -63,18 +64,7 @@ const Description = styled.p`
   font-size: 20px;
   margin-top: 8px;
 `;
-const Button = styled.button`
-  width: 150px;
-  border: 3.5px solid white;
-  padding: 15px 20px;
-  border-radius: 15px;
-  background-color: lightcoral;
-  font-size: 15px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  cursor: pointer;
-  margin-top: 20px;
-`;
+
 
 const GymInfo = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -111,7 +101,7 @@ const GymInfo = (props) => {
         <Description>
           Comfort <BsCheckCircle style={{ color: "green" }} />
         </Description>
-        <Button onClick={() => setIsOpen(true)}>3D VISIT</Button>
+        <Button color="lightcoral" onClick={() => setIsOpen(true)}>3D VISIT</Button>
       </Right>
     </Container>
   );

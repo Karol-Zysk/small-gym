@@ -1,15 +1,19 @@
 import React from "react";
 import styled from "styled-components";
+import Button from "./Button";
 
 const Container = styled.div`
   height: 50px;
-  padding: 1vh 1vw 0vh 1vw ;
+  padding: 1vh 1vw 0vh 1vw;
+
+  
 `;
 const Wrapper = styled.div`
   padding: 10px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  
 `;
 
 const Left = styled.div`
@@ -28,6 +32,10 @@ const Logo = styled.h1`
 const Menu = styled.ul`
   display: flex;
   list-style: none;
+
+  @media only screen and (max-width: 500px) {
+    display: none;
+  }
 `;
 
 const MenuItem = styled.li`
@@ -35,16 +43,6 @@ const MenuItem = styled.li`
   font-size: 25px;
   font-weight: bold;
   color: gray;
-`;
-
-const Button = styled.button`
-  border: 2px solid white;
-  padding: 10px 15px;
-  background-color: blue;
-  color: white;
-  font-weight: bold;
-  border-radius: 10px;
-  cursor: pointer;
 `;
 
 const Navbar = () => {
@@ -61,7 +59,7 @@ const Navbar = () => {
             <MenuItem>Contact</MenuItem>
           </Menu>
         </Left>
-        <Button>Join Us</Button>
+        <Button color="blue">Join Us</Button>
       </Wrapper>
     </Container>
   );

@@ -4,6 +4,8 @@ import Home from "./components/Home";
 import GymInfo from "./components/GymInfo";
 import StartToday from "./components/StartToday";
 import Prices from "./components/Prices";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 const Container = styled.div`
   height: 100vh;
@@ -56,6 +58,27 @@ const Shape2 = styled.div`
   background-color: blue;
   z-index: -1;
 `;
+const PriceShape = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 0, 0 39%, 28% 0);
+  background-color: blue;
+  z-index: -1;
+`;
+
+const PriceShape2 = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(40% 100%, 100% 100%, 100% 0);
+  background-color: gold;
+  z-index: -1;
+`;
 
 function App() {
   return (
@@ -75,7 +98,13 @@ function App() {
         <StartToday />
       </Container>
       <Container>
-        <Prices/>
+        <PriceShape />
+        <PriceShape2 />
+        <Prices />
+      </Container>
+      <Container>
+        <Contact />
+        <Footer />
       </Container>
     </>
   );
