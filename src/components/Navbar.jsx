@@ -135,7 +135,7 @@ const Navbar = () => {
         </Left>
         <Button color="blue"><Link
                 activeClass="active"
-                to="contact"
+                to="start"
                 spy={true}
                 smooth={true}
                 offset={0}

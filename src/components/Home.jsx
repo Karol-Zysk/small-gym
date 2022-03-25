@@ -40,7 +40,7 @@ const Desc = styled.p`
   margin-top: 20px;
   @media only screen and (max-width: 500px) {
     width: 100%;
-    pointer-events: none;
+    
   }
 `;
 
@@ -50,7 +50,6 @@ const Info = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
-  pointer-events: none;
 
   @media only screen and (max-width: 500px) {
     width: 100%;
@@ -89,7 +88,6 @@ const Right = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  pointer-events: none;
   @media only screen and (max-width: 500px) {
     flex-direction: column;
   }

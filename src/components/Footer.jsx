@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "react-scroll/modules/components/Link";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -12,9 +13,9 @@ const Wrapper = styled.div`
   padding-top: 55px;
   display: flex;
   justify-content: space-between;
-  @media only screen and (max-width: 500px) {}
+  @media only screen and (max-width: 500px) {
+  }
   padding: 15px;
-
 `;
 
 const List = styled.ul`
@@ -25,11 +26,13 @@ const List = styled.ul`
 `;
 
 const ListItem = styled.li`
+  cursor: pointer;
   margin-right: 20px;
   min-height: 15%;
   @media only screen and (max-width: 500px) {
-    margin-right: 15px;
-    font-size: 13px
+    margin-right: 17px;
+    margin-top: 20px;
+    font-size: 15px;
   }
 `;
 
@@ -38,7 +41,7 @@ const Copyright = styled.span`
   font-size: 20px;
   @media only screen and (max-width: 500px) {
     font-size: 16px;
-    margin-bottom: 2opx;
+    margin-top: 20px;
   }
 `;
 
@@ -47,10 +50,33 @@ const Footer = () => {
     <Container>
       <Wrapper>
         <List>
-          <ListItem>Facebook</ListItem>
-          <ListItem>Twitter</ListItem>
-          <ListItem>Instagram</ListItem>
-          <ListItem>Tik Tok</ListItem>
+          <ListItem>
+            <a
+              style={{ color: "white", textDecoration: "none" }}
+              href="https://shattereddisk.github.io/rickroll/rickroll.mp4"
+              target="blank"
+            >
+              Tik Tok
+            </a>
+          </ListItem>
+          <ListItem>
+            <a
+              style={{ color: "white", textDecoration: "none" }}
+              href="https://www.facebook.com"
+              target="blank"
+            >
+              Facebook
+            </a>
+          </ListItem>
+          <ListItem>
+            <a
+              style={{ color: "white", textDecoration: "none" }}
+              href="https://www.twitter.com"
+              target="blank"
+            >
+              Twitter
+            </a>
+          </ListItem>
         </List>
         <Copyright>Dev Karol ©</Copyright>
       </Wrapper>

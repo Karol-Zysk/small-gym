@@ -6,7 +6,7 @@ import map from "./img/map.jpg";
 import Button from "./Button";
 
 const Container = styled.div`
-  height: 90%;
+  height: 85%;
   
   @media only screen and (max-width: 500px) {
     flex-direction: column;
