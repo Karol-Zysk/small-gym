@@ -3,6 +3,7 @@ import styled from "styled-components";
 import Button from "./Button";
 import image from "./img/gym3.png";
 import MiniCard from "./MiniCard";
+import { Link } from "react-scroll/modules";
 
 const Container = styled.div`
   display: flex;
@@ -97,7 +98,17 @@ const StartToday = () => {
               return <MiniCard number={card.number} text={card.text} />;
             })}
           </CardContainer>
-          <Button color="orange"> Free Training</Button>
+          <Button color="orange"><Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                delay={100}
+              >
+                Free Training
+              </Link></Button>
         </Wrapper>
       </Right>
     </Container>

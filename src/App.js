@@ -80,29 +80,53 @@ const PriceShape2 = styled.div`
   z-index: -1;
 `;
 
+const ContactShape = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(40% 0, 100% 0, 100% 100%, 100% 100%);
+  background: gold;
+  z-index: -1;
+`;
+
+const ContactShape2 = styled.div`
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  clip-path: polygon(0 28%, 0% 100%, 54% 100%);
+  background: blue;
+  z-index: -1;
+`;
+
 function App() {
   return (
     <>
-      <Container>
+      <Container id="home">
         <Shape />
         <Shape2 />
         <Navbar />
         <Home />
       </Container>
-      <Container>
+      <Container id="info">
         <Shape3 />
         <GymInfo></GymInfo>
       </Container>
-      <Container>
+      <Container id="start">
         <StartTodayShape />
         <StartToday />
       </Container>
-      <Container>
+      <Container id="price">
         <PriceShape />
         <PriceShape2 />
         <Prices />
       </Container>
-      <Container>
+      <Container id="contact">
+        <ContactShape />
+        <ContactShape2 />
         <Contact />
         <Footer />
       </Container>

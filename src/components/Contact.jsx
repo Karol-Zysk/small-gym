@@ -6,10 +6,11 @@ import map from "./img/map.jpg";
 import Button from "./Button";
 
 const Container = styled.div`
-  height: 80%;
-  background: white;
+  height: 90%;
+  
   @media only screen and (max-width: 500px) {
     flex-direction: column;
+    margin-bottom: 25px;
   }
 `;
 const Wrapper = styled.div`
@@ -21,6 +22,8 @@ const Wrapper = styled.div`
   @media only screen and (max-width: 500px) {
     flex-direction: column;
     padding: 0;
+    justify-content: space-between;
+    
   }
 `;
 
@@ -38,6 +41,7 @@ const Form = styled.form`
   justify-content: center;
   @media only screen and (max-width: 500px) {
     flex-direction: column;
+    height: 100%;
   }
 `;
 
@@ -59,7 +63,7 @@ const LeftForm = styled.div`
   justify-content: space-between;
   margin-right: 20px;
   @media only screen and (max-width: 500px) {
-    height: 50%;
+    height: 40%;
     margin-right: 0;
   }
 `;
@@ -70,7 +74,7 @@ const RightForm = styled.div`
   flex-direction: column;
   justify-content: space-between;
   @media only screen and (max-width: 500px) {
-    height: 50%;
+    height: 60%;
     margin-right: 0;
   }
 `;
@@ -89,6 +93,7 @@ const TextArea = styled.textarea`
   @media only screen and (max-width: 500px) {
     padding: 5px;
     margin-top: 20px;
+    height: 80%;
   }
 `;
 
@@ -99,6 +104,7 @@ const AdressContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: left;
+  justify-items: center;
 `;
 
 const AdressItem = styled.div`
@@ -108,7 +114,9 @@ const AdressItem = styled.div`
 
 const Icon = styled.img`
   width: 20px;
+  margin-bottom: 9px;
   margin-right: 20px;
+  align-items: center;
   
 `;
 

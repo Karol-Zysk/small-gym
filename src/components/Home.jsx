@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import Gym from "./img/gym1.png";
+import { Link } from "react-scroll";
 
 const Container = styled.div`
   height: calc(100vh - 50px);
@@ -39,6 +40,7 @@ const Desc = styled.p`
   margin-top: 20px;
   @media only screen and (max-width: 500px) {
     width: 100%;
+    pointer-events: none;
   }
 `;
 
@@ -48,6 +50,7 @@ const Info = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-top: 50px;
+  pointer-events: none;
 
   @media only screen and (max-width: 500px) {
     width: 100%;
@@ -86,7 +89,7 @@ const Right = styled.div`
 
 const Image = styled.img`
   width: 100%;
-
+  pointer-events: none;
   @media only screen and (max-width: 500px) {
     flex-direction: column;
   }
@@ -104,7 +107,19 @@ const Home = () => {
           friend.
         </Desc>
         <Info>
-          <Button color="blue">Contact</Button>
+          <Button color="blue">
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={0}
+              duration={500}
+              delay={100}
+            >
+              Contact
+            </Link>
+          </Button>
           <Contact>
             <Phone>Call Us: (22) 314-159-265</Phone>
             <ContactText>For any questions</ContactText>

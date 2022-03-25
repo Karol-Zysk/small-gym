@@ -26,9 +26,10 @@ const List = styled.ul`
 
 const ListItem = styled.li`
   margin-right: 20px;
+  min-height: 15%;
   @media only screen and (max-width: 500px) {
     margin-right: 15px;
-    font-size: 15lpx
+    font-size: 13px
   }
 `;
 

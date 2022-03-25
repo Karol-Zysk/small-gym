@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-scroll/modules";
 import styled from "styled-components";
 import Button from "./Button";
 
@@ -30,7 +31,7 @@ const Logo = styled.h1`
   color: white;
   @media only screen and (max-width: 500px) {
     color: black;
-    text-decoration: underline ;
+    text-decoration: underline;
   }
 `;
 
@@ -48,6 +49,13 @@ const MenuItem = styled.li`
   font-size: 25px;
   font-weight: bold;
   color: gray;
+  transition: 1s ease-in-out;
+
+  &&:hover {
+    text-decoration: underline;
+    transition: 500ms ease-in-out;
+    cursor: pointer;
+  }
 `;
 
 const Navbar = () => {
@@ -58,13 +66,84 @@ const Navbar = () => {
           <Logo>Small Gym</Logo>
 
           <Menu>
-            <MenuItem>Home</MenuItem>
-            <MenuItem>Info</MenuItem>
-            <MenuItem>Prices</MenuItem>
-            <MenuItem>Contact</MenuItem>
+            <MenuItem>
+              <Link
+                activeClass="active"
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                delay={100}
+              >
+                Home
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link
+                activeClass="active"
+                to="info"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                delay={100}
+              >
+                Info
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link
+                activeClass="active"
+                to="start"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                delay={100}
+              >
+                Start
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link
+                activeClass="active"
+                to="price"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                delay={100}
+              >
+                Price
+              </Link>
+            </MenuItem>
+            <MenuItem>
+              <Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                delay={100}
+              >
+                Contact
+              </Link>
+            </MenuItem>
           </Menu>
         </Left>
-        <Button color="blue">Join Us</Button>
+        <Button color="blue"><Link
+                activeClass="active"
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
+                delay={100}
+              >
+                Join Us
+              </Link></Button>
       </Wrapper>
     </Container>
   );
