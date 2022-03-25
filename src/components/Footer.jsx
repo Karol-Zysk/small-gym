@@ -1,5 +1,4 @@
 import React from "react";
-import Link from "react-scroll/modules/components/Link";
 import styled from "styled-components";
 
 const Container = styled.div`
