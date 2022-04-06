@@ -10,4 +10,4 @@ Projekt Małej Siłowni.
 Pierwszy projekt ze styled components. Żałuję, że nie poznałem wcześniej .
 
 Small Gym Project.
-First project with styled components. I wish I had met them sooner.
+First project with styled components. I wish I had met them before.
