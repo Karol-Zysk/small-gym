@@ -4,7 +4,7 @@
 <img src="https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white" alt="Styled Components"/>,
 <img src="https://img.shields.io/badge/React_Router-CA4245?style=for-the-badge&logo=react-router&logoColor=white" alt="React"/>
 
-live: https://lighthearted-conkies-e8289f.netlify.app/
+live: https://inquisitive-scone-a3752c.netlify.app/
 
 Projekt Małej Siłowni.
 Pierwszy projekt ze styled components. Żałuję, że nie poznałem wcześniej .
